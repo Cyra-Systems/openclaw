@@ -1,0 +1,464 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PELICAN PANEL - PELICAN.DEV",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2026-04-19T00:00:00+00:00",
+    "name": "OpenClaw (Prebuilt Image)",
+    "author": "team@cyra.systems",
+    "description": "OpenClaw prebuilt-image variant. Uses ghcr.io/openclaw/openclaw:latest directly - no source clone, no build, no pnpm/Bun toolchain. The startup wrapper materialises a per-deployment openclaw.json from env vars so gateway.controlUi.allowedOrigins includes the customer's reverse-proxy FQDN (OPENCLAW_PUBLIC_HOSTNAME). Set that variable to the exact hostname the browser shows (the Origin the proxy forwards) and the 'origin not allowed' error goes away on first boot.",
+    "features": [
+        "eula"
+    ],
+    "docker_images": {
+        "ghcr.io/openclaw/openclaw:latest": "ghcr.io/openclaw/openclaw:latest"
+    },
+    "file_denylist": [],
+    "startup": "sh -c \"echo Y29uc3QgZnMgPSByZXF1aXJlKCdmcycpOwpjb25zdCBwYXRoID0gcmVxdWlyZSgncGF0aCcpOwpjb25zdCBwID0gcHJvY2Vzcy5lbnYuT1BFTkNMQVdfQ09ORklHX1BBVEggfHwgJy9ob21lL2NvbnRhaW5lci9vcGVuY2xhdy5qc29uJzsKY29uc3QgcG9ydCA9IE51bWJlcihwcm9jZXNzLmVudi5TRVJWRVJfUE9SVCkgfHwgMTg3ODk7CmNvbnN0IGlwID0gKHByb2Nlc3MuZW52LlNFUlZFUl9JUCB8fCAnJykudHJpbSgpOwpjb25zdCBob3N0ID0gKHByb2Nlc3MuZW52Lk9QRU5DTEFXX1BVQkxJQ19IT1NUTkFNRSB8fCAnJykudHJpbSgpOwpjb25zdCBzY2hlbWUgPSAoKHByb2Nlc3MuZW52Lk9QRU5DTEFXX1BVQkxJQ19TQ0hFTUUgfHwgJ2h0dHBzJykudG9Mb3dlckNhc2UoKSA9PT0gJ2h0dHAnKSA/ICdodHRwJyA6ICdodHRwcyc7CmNvbnN0IGV4dHJhcyA9IChwcm9jZXNzLmVudi5PUEVOQ0xBV19FWFRSQV9BTExPV0VEX09SSUdJTlMgfHwgJycpCiAgLnNwbGl0KCcsJykubWFwKHMgPT4gcy50cmltKCkpLmZpbHRlcihCb29sZWFuKTsKY29uc3QgYmluZCA9IChwcm9jZXNzLmVudi5PUEVOQ0xBV19HQVRFV0FZX0JJTkQgfHwgJ2xhbicpLnRyaW0oKTsKY29uc3QgbyA9IG5ldyBTZXQoW2BodHRwOi8vbG9jYWxob3N0OiR7cG9ydH1gLCBgaHR0cDovLzEyNy4wLjAuMToke3BvcnR9YF0pOwppZiAoaXApIG8uYWRkKGBodHRwOi8vJHtpcH06JHtwb3J0fWApOwppZiAoaG9zdCkgewogIG8uYWRkKGAke3NjaGVtZX06Ly8ke2hvc3R9YCk7CiAgby5hZGQoYCR7c2NoZW1lfTovLyR7aG9zdH06JHtwb3J0fWApOwogIGlmIChzY2hlbWUgPT09ICdodHRwcycpIG8uYWRkKGBodHRwOi8vJHtob3N0fToke3BvcnR9YCk7Cn0KZm9yIChjb25zdCBlIG9mIGV4dHJhcykgby5hZGQoZSk7CmxldCBjID0ge307CnRyeSB7IGMgPSBKU09OLnBhcnNlKGZzLnJlYWRGaWxlU3luYyhwLCAndXRmOCcpKTsgfSBjYXRjaCAoXykge30KYy5nYXRld2F5ID0gYy5nYXRld2F5IHx8IHt9OwpjLmdhdGV3YXkuYmluZCA9IGMuZ2F0ZXdheS5iaW5kIHx8IGJpbmQ7CmMuZ2F0ZXdheS5wb3J0ID0gcG9ydDsKYy5nYXRld2F5LmNvbnRyb2xVaSA9IGMuZ2F0ZXdheS5jb250cm9sVWkgfHwge307CmNvbnN0IGV4ID0gQXJyYXkuaXNBcnJheShjLmdhdGV3YXkuY29udHJvbFVpLmFsbG93ZWRPcmlnaW5zKQogID8gYy5nYXRld2F5LmNvbnRyb2xVaS5hbGxvd2VkT3JpZ2lucy5maWx0ZXIoeCA9PiB0eXBlb2YgeCA9PT0gJ3N0cmluZycgJiYgeC50cmltKCkpCiAgOiBbXTsKYy5nYXRld2F5LmNvbnRyb2xVaS5hbGxvd2VkT3JpZ2lucyA9IFsuLi5uZXcgU2V0KFsuLi5leCwgLi4ub10pXTsKZnMubWtkaXJTeW5jKHBhdGguZGlybmFtZShwKSwgeyByZWN1cnNpdmU6IHRydWUgfSk7CmZzLndyaXRlRmlsZVN5bmMocCwgSlNPTi5zdHJpbmdpZnkoYywgbnVsbCwgMikgKyAnXG4nKTsKY29uc29sZS5sb2coJ1tvcGVuY2xhd10gd3JvdGUgJyArIHAgKyAnIGFsbG93ZWRPcmlnaW5zPScgKyBKU09OLnN0cmluZ2lmeShjLmdhdGV3YXkuY29udHJvbFVpLmFsbG93ZWRPcmlnaW5zKSk7 | base64 -d | node && exec node /app/openclaw.mjs gateway --bind ${OPENCLAW_GATEWAY_BIND} --port ${SERVER_PORT} --config ${OPENCLAW_CONFIG_PATH}\"",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"gateway listening\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/sh\n# No build needed - the runtime image ghcr.io/openclaw/openclaw:latest\n# already contains the built application. We only ensure the volume is\n# owned by the runtime user (uid 1000 = `node` in the openclaw image).\nset -e\nmkdir -p /mnt/server\necho \"openclaw prebuilt image - no build required\" > /mnt/server/.installed\nchown -R 1000:1000 /mnt/server || true\n",
+            "container": "alpine:3.20",
+            "entrypoint": "sh"
+        }
+    },
+    "variables": [
+        {
+            "name": "Gateway Bind Mode",
+            "description": "Where the gateway listens. 'lan' = 0.0.0.0 (reachable via Wings port mapping). Use 'lan' for normal panel usage.",
+            "env_variable": "OPENCLAW_GATEWAY_BIND",
+            "default_value": "lan",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:lan,loopback",
+            "field_type": "text"
+        },
+        {
+            "name": "Public Hostname (reverse-proxy FQDN)",
+            "description": "REQUIRED IF YOU USE A REVERSE PROXY. The exact hostname the browser shows in the address bar (e.g. customer1.openclaw.example.com). The browser's Origin header uses this; it must match an entry in allowedOrigins or you will see 'origin not allowed'. Leave blank if you only access via SERVER_IP:SERVER_PORT directly.",
+            "env_variable": "OPENCLAW_PUBLIC_HOSTNAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:253",
+            "field_type": "text"
+        },
+        {
+            "name": "Public Scheme",
+            "description": "Scheme of the reverse proxy. Use 'https' when the proxy terminates TLS, 'http' otherwise. The full origin (scheme://hostname) is added to allowedOrigins.",
+            "env_variable": "OPENCLAW_PUBLIC_SCHEME",
+            "default_value": "https",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:http,https",
+            "field_type": "text"
+        },
+        {
+            "name": "Extra Allowed Origins",
+            "description": "Comma-separated list of additional full origins (scheme://host[:port]) to merge into gateway.controlUi.allowedOrigins. Useful for staging domains, staff tools, or temporary debug origins. '*' is allowed but disables CORS protection.",
+            "env_variable": "OPENCLAW_EXTRA_ALLOWED_ORIGINS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        },
+        {
+            "name": "Config Path",
+            "description": "Where openclaw.json lives inside the container. Must be in /home/container so Pelican preserves it across restarts.",
+            "env_variable": "OPENCLAW_CONFIG_PATH",
+            "default_value": "/home/container/openclaw.json",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Gateway Auth Token",
+            "description": "Bearer token required when the gateway binds beyond loopback. Generate with: openssl rand -hex 32. Required for any non-loopback bind. Do NOT leave this blank in production.",
+            "env_variable": "OPENCLAW_GATEWAY_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|min:16|max:256",
+            "field_type": "text"
+        },
+        {
+            "name": "Gateway Auth Password (alt)",
+            "description": "Optional alternative to the token-based auth. Use either a token OR a password, not both.",
+            "env_variable": "OPENCLAW_GATEWAY_PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|min:8|max:256",
+            "field_type": "text"
+        },
+        {
+            "name": "State Directory Override",
+            "description": "Optional override for the OpenClaw state directory.",
+            "env_variable": "OPENCLAW_STATE_DIR",
+            "default_value": "/home/container/.openclaw",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "HOME",
+            "description": "Container HOME dir (set to the persistent volume so openclaw can write state).",
+            "env_variable": "HOME",
+            "default_value": "/home/container",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "OpenAI API Key",
+            "description": "API key for OpenAI.",
+            "env_variable": "OPENAI_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Anthropic API Key",
+            "description": "API key for Anthropic (Claude).",
+            "env_variable": "ANTHROPIC_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Gemini API Key",
+            "description": "API key for Google Gemini / AI Studio.",
+            "env_variable": "GEMINI_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Google API Key",
+            "description": "API key for Google (alias used by some Gemini flows).",
+            "env_variable": "GOOGLE_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "OpenRouter API Key",
+            "description": "API key for OpenRouter.",
+            "env_variable": "OPENROUTER_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Groq API Key",
+            "description": "API key for Groq.",
+            "env_variable": "GROQ_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Ollama API Key",
+            "description": "API key for a local/remote Ollama instance.",
+            "env_variable": "OLLAMA_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Z.AI API Key",
+            "description": "API key for Z.AI.",
+            "env_variable": "ZAI_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "AI Gateway API Key",
+            "description": "API key for a Vercel-compatible AI gateway.",
+            "env_variable": "AI_GATEWAY_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "MiniMax API Key",
+            "description": "API key for MiniMax.",
+            "env_variable": "MINIMAX_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Synthetic API Key",
+            "description": "API key for the Synthetic provider.",
+            "env_variable": "SYNTHETIC_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "OpenAI Live Key",
+            "description": "Dedicated key for OpenAI live/realtime flows.",
+            "env_variable": "OPENCLAW_LIVE_OPENAI_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Anthropic Live Key",
+            "description": "Dedicated key for Anthropic live/realtime flows.",
+            "env_variable": "OPENCLAW_LIVE_ANTHROPIC_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Gemini Live Key",
+            "description": "Dedicated key for Gemini live/realtime flows.",
+            "env_variable": "OPENCLAW_LIVE_GEMINI_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "OpenAI API Keys (pool)",
+            "description": "Comma-separated pool of OpenAI keys.",
+            "env_variable": "OPENAI_API_KEYS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        },
+        {
+            "name": "Anthropic API Keys (pool)",
+            "description": "Comma-separated pool of Anthropic keys.",
+            "env_variable": "ANTHROPIC_API_KEYS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        },
+        {
+            "name": "Gemini API Keys (pool)",
+            "description": "Comma-separated pool of Gemini keys.",
+            "env_variable": "GEMINI_API_KEYS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        },
+        {
+            "name": "Telegram Bot Token",
+            "description": "Token for the Telegram channel.",
+            "env_variable": "TELEGRAM_BOT_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Discord Bot Token",
+            "description": "Token for the Discord channel.",
+            "env_variable": "DISCORD_BOT_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Slack Bot Token",
+            "description": "Bot token (xoxb-...) for the Slack channel.",
+            "env_variable": "SLACK_BOT_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Slack App Token",
+            "description": "App-level token (xapp-...) for Slack Socket Mode.",
+            "env_variable": "SLACK_APP_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Mattermost Bot Token",
+            "description": "Access token for the Mattermost channel.",
+            "env_variable": "MATTERMOST_BOT_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Mattermost URL",
+            "description": "Base URL of the Mattermost server.",
+            "env_variable": "MATTERMOST_URL",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|url|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Zalo Bot Token",
+            "description": "Token for the Zalo channel.",
+            "env_variable": "ZALO_BOT_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Twitch Access Token",
+            "description": "OAuth token for the Twitch channel.",
+            "env_variable": "OPENCLAW_TWITCH_ACCESS_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Brave Search API Key",
+            "description": "API key for the Brave Search tool.",
+            "env_variable": "BRAVE_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Perplexity API Key",
+            "description": "API key for Perplexity.",
+            "env_variable": "PERPLEXITY_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Firecrawl API Key",
+            "description": "API key for Firecrawl.",
+            "env_variable": "FIRECRAWL_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "ElevenLabs API Key",
+            "description": "API key for ElevenLabs voice synthesis.",
+            "env_variable": "ELEVENLABS_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "ElevenLabs API Key (XI alias)",
+            "description": "Alias env var some SDKs expect for ElevenLabs.",
+            "env_variable": "XI_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Deepgram API Key",
+            "description": "API key for Deepgram speech-to-text.",
+            "env_variable": "DEEPGRAM_API_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Claude.ai Session Key",
+            "description": "Session key for the optional Claude.ai web provider.",
+            "env_variable": "CLAUDE_AI_SESSION_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2048",
+            "field_type": "text"
+        },
+        {
+            "name": "Claude Web Session Key",
+            "description": "Alternate session key for the Claude web provider.",
+            "env_variable": "CLAUDE_WEB_SESSION_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2048",
+            "field_type": "text"
+        },
+        {
+            "name": "Claude Web Cookie",
+            "description": "Raw cookie string for the Claude web provider.",
+            "env_variable": "CLAUDE_WEB_COOKIE",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        }
+    ]
+}
