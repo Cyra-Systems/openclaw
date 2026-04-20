@@ -1,5 +1,4 @@
 {
-  "claw.json": {
     "gateway": {
       "auth": {
         "password": "${OPENCLAW_GATEWAY_PASSWORD}"
@@ -16,4 +15,3 @@
       }
     }
   }
-}
