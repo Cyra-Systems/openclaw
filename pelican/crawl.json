@@ -1,0 +1,19 @@
+{
+  "claw.json": {
+    "gateway": {
+      "auth": {
+        "password": "${OPENCLAW_GATEWAY_PASSWORD}"
+      },
+      "trustedProxies": [
+        "${OPENCLAW_TRUSTED_PROXIES}"
+      ],
+      "controlUi": {
+        "dangerouslyAllowHostHeaderOriginFallback": true,
+        "allowedOrigins": [
+          "${OPENCLAW_PUBLIC_SCHEME}://${OPENCLAW_PUBLIC_HOSTNAME}",
+          "http://localhost:18789"
+        ]
+      }
+    }
+  }
+}
